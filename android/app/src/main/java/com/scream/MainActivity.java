@@ -1,5 +1,6 @@
 package com.scream;
 
+//import android.os.bundle;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -12,4 +13,11 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "scream";
   }
+
+/*
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
+  */
 }
