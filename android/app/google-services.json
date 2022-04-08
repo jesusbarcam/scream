@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "772924471090",
+    "project_id": "scream-c74e7",
+    "storage_bucket": "scream-c74e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772924471090:android:34da6206e2378c85da892b",
+        "android_client_info": {
+          "package_name": "com.scream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772924471090-hd62up09mv0li4456rsa8rvi0ce2jga3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scream",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "772924471090-rovt4qr1pp3dks6i2pkosm2o51989lkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnsBNgTG3yP4myurrcHd6Tvsp3ZoGoMnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772924471090-rovt4qr1pp3dks6i2pkosm2o51989lkd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "772924471090-5poufrivegvordgutakthjvtsf8er4de.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rawdog.scream"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
