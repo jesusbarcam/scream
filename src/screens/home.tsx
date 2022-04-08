@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
-
 import firestore from '@react-native-firebase/firestore';
 
 interface UserAccount {
@@ -11,10 +10,11 @@ interface UserAccount {
 }
 
 /**
- * @screen
+ * @component
+ * @react_screen
  * @description
  */
-const HomeScreen = () => {
+const Home = () => {
   const [data, setData] = useState<UserAccount>();
 
   async function loadData() {
@@ -34,6 +34,7 @@ const HomeScreen = () => {
   return (
     <View>
       <Text>Esto es el inicio de algo muy bonito!</Text>
+
       {data ? (
         <View>
           <Text>{data.name}</Text>
@@ -46,4 +47,24 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default Home;
+
+/*
+import {useTheme} from './src/hooks/UseTheme';
+
+const currentTheme = useTheme();
+
+<SafeAreaView style={[MainStyleSheet.appStyle, currentTheme.background]}>
+        <View style={MainStyleSheet.container}>
+          <View
+            style={[
+              MainStyleSheet.testBox,
+              {backgroundColor: currentTheme.highlightColour},
+            ]}
+          />
+          <Text style={[MainStyleSheet.paragraph, currentTheme.text]}>
+            <Home></Home>
+          </Text>
+        </View>
+      </SafeAreaView>
+*/
