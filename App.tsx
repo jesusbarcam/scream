@@ -5,6 +5,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {MainStyleSheet} from './src/themes/main';
 import {useTheme} from './src/hooks/UseTheme';
 
+import HomeScreen from './src/screens/home';
+
 const App = () => {
   const currentTheme = useTheme();
   return (
@@ -18,7 +20,7 @@ const App = () => {
             ]}
           />
           <Text style={[MainStyleSheet.paragraph, currentTheme.text]}>
-            Esto es el inicio de algo muy bonito!
+            <HomeScreen></HomeScreen>
           </Text>
         </View>
       </SafeAreaView>
