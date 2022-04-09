@@ -14,7 +14,11 @@ const Login = ({navigation}: Props) => {
   return (
     <View>
       <TouchableHighlight onPress={() => navigation.navigate('Home')}>
-        <Text>Ir al Login</Text>
+        <Text>Ir al Home</Text>
+      </TouchableHighlight>
+
+      <TouchableHighlight onPress={() => navigation.navigate('Home')}>
+        <Text>Ir al Landing</Text>
       </TouchableHighlight>
     </View>
   );
