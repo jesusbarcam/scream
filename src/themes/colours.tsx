@@ -27,10 +27,10 @@ const FIFTH_LIGHTNESS = '0%';
  * @constants
  * * All Colours used in application
  */
-export const first = `hsl(${FIRST_BASE}, ${FIRST_LIGHTNESS})`;
-export const second = `hsl(${SECOND_BASE}, ${SECOND_LIGHTNESS})`;
-export const third = `hsl(${THIRD_BASE}, ${THIRD_LIGHTNESS})`;
-export const fourth = `hsl(${FOURTH_BASE},${FOURTH_LIGHTNESS})`;
-export const fifth = `hsl(${FIFTH_BASE},${FIFTH_LIGHTNESS})`;
+export const firstColor = `hsl(${FIRST_BASE}, ${FIRST_LIGHTNESS})`;
+export const secondColor = `hsl(${SECOND_BASE}, ${SECOND_LIGHTNESS})`;
+export const thirdColor = `hsl(${THIRD_BASE}, ${THIRD_LIGHTNESS})`;
+export const fourthColor = `hsl(${FOURTH_BASE},${FOURTH_LIGHTNESS})`;
+export const fifthColor = `hsl(${FIFTH_BASE},${FIFTH_LIGHTNESS})`;
 //export const sixth = '';
 //export const seventh = '';
