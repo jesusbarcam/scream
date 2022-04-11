@@ -10,7 +10,7 @@ interface Props {
  * @react_screen
  * @description
  */
-const Login = ({navigation}: Props) => {
+export default function Login({navigation}: Props) {
   return (
     <View>
       <TouchableHighlight onPress={() => navigation.navigate('Home')}>
@@ -22,6 +22,4 @@ const Login = ({navigation}: Props) => {
       </TouchableHighlight>
     </View>
   );
-}; // LoginScreen
-
-export default Login;
+} // LoginScreen

@@ -29,7 +29,7 @@ const navigationMainOptions: StackNavigationOptions = {
  * @react_router
  * @description
  */
-const MainRouter = () => {
+export default function MainRouter() {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -49,6 +49,4 @@ const MainRouter = () => {
       />
     </Stack.Navigator>
   );
-};
-
-export default MainRouter;
+}

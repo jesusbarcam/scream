@@ -7,12 +7,10 @@ import MainRouter from './src/routers/Main';
  * @react_component
  * @description
  */
-const App = () => {
+export default function App() {
   return (
     <NavigationContainer>
       <MainRouter />
     </NavigationContainer>
   );
-}; // App
-
-export default App;
+} // App
