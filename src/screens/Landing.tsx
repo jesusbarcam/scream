@@ -1,30 +1,47 @@
 import React from 'react';
-import {View, Text, TouchableHighlight} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+
+import LandingLogo from '../components/LandingLogo';
+import {secondColor} from '../themes/colours';
+
 interface Props {
   navigation: any;
   authorized: boolean;
 }
 /**
- * @component
- * @react_screen
+ * @Component
+ * @React_screen
  * @description
  */
-const Landing = ({navigation, authorized}: Props) => {
+export default function Landing({navigation, authorized}: Props) {
   if (authorized) {
     navigation.navigate('Home');
   } // If
 
   return (
-    <View>
-      <Text>Esto es el Landing</Text>
-      <TouchableHighlight onPress={() => navigation.navigate('Login')}>
-        <Text>Ir al Login</Text>
-      </TouchableHighlight>
-      <TouchableHighlight onPress={() => navigation.navigate('Home')}>
-        <Text>Ir al Home</Text>
-      </TouchableHighlight>
-    </View>
+    <SafeAreaView style={styles.wrap}>
+      {/* <View>
+        <Text>Esto es el Landing</Text>
+        <TouchableHighlight onPress={() => navigation.navigate('Login')}>
+          <Text>Ir al Login Pogin</Text>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={() => navigation.navigate('Home')}>
+          <Text>Ir al Home</Text>
+        </TouchableHighlight>
+      </View> */}
+      <LandingLogo />
+    </SafeAreaView>
   );
-};
+}
 
-export default Landing;
+/**
+ * @Styles
+ * @description
+ */
+const styles = StyleSheet.create({
+  wrap: {
+    flex: 1,
+    backgroundColor: secondColor,
+  },
+});

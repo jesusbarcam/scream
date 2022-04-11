@@ -4,15 +4,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import MainRouter from './src/routers/Main';
 
 /**
- * @component
+ * @react_component
  * @description
  */
-const App = () => {
+export default function App() {
   return (
     <NavigationContainer>
       <MainRouter />
     </NavigationContainer>
   );
-};
-
-export default App;
+} // App
