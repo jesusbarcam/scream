@@ -3,6 +3,7 @@ import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import LandingLogo from '../components/LandingLogo';
+import MultimediaKeyboard from '../components/MultimediaKeyboard';
 import {secondColor} from '../themes/colours';
 
 interface Props {
@@ -21,16 +22,8 @@ export default function Landing({navigation, authorized}: Props) {
 
   return (
     <SafeAreaView style={styles.wrap}>
-      {/* <View>
-        <Text>Esto es el Landing</Text>
-        <TouchableHighlight onPress={() => navigation.navigate('Login')}>
-          <Text>Ir al Login Pogin</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => navigation.navigate('Home')}>
-          <Text>Ir al Home</Text>
-        </TouchableHighlight>
-      </View> */}
       <LandingLogo />
+      <MultimediaKeyboard />
     </SafeAreaView>
   );
 }
