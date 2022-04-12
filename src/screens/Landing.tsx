@@ -3,34 +3,28 @@ import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import LandingLogo from '../components/LandingLogo';
+import MultimediaKeyboard from '../components/MultimediaKeyboard';
 import {secondColor} from '../themes/colours';
 
-interface Props {
+type LandingProps = {
   navigation: any;
   authorized: boolean;
-}
+}; // LandingProps
+
 /**
  * @Component
  * @React_screen
  * @description
  */
-export default function Landing({navigation, authorized}: Props) {
+export default function Landing({navigation, authorized}: LandingProps) {
   if (authorized) {
     navigation.navigate('Home');
   } // If
 
   return (
     <SafeAreaView style={styles.wrap}>
-      {/* <View>
-        <Text>Esto es el Landing</Text>
-        <TouchableHighlight onPress={() => navigation.navigate('Login')}>
-          <Text>Ir al Login Pogin</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => navigation.navigate('Home')}>
-          <Text>Ir al Home</Text>
-        </TouchableHighlight>
-      </View> */}
       <LandingLogo />
+      <MultimediaKeyboard />
     </SafeAreaView>
   );
 }

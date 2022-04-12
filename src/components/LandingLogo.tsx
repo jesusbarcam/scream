@@ -6,6 +6,7 @@ import BackgroundLogo from '../assets/images/Background.svg';
 
 /**
  * @Component
+ * @React_component
  * @description
  */
 export default function LandingLogo() {
@@ -36,8 +37,6 @@ const styles = StyleSheet.create({
   backgroundImage: {
     width: '160%',
     height: '160%',
-    borderWidth: 2,
-    borderColor: 'red',
     zIndex: 0,
     opacity: 0.65,
   },
