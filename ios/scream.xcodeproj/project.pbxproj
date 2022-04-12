@@ -11,6 +11,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		5232A44C280567E200D5191F /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5232A44B280567E200D5191F /* FontAwesome.ttf */; };
+		5232A44D280567E200D5191F /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5232A44B280567E200D5191F /* FontAwesome.ttf */; };
+		5232A44F280567FC00D5191F /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5232A44E280567FC00D5191F /* MaterialIcons.ttf */; };
+		5232A450280567FC00D5191F /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5232A44E280567FC00D5191F /* MaterialIcons.ttf */; };
+		5232A4522805682D00D5191F /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5232A4512805682D00D5191F /* Zocial.ttf */; };
+		5232A4532805682D00D5191F /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5232A4512805682D00D5191F /* Zocial.ttf */; };
 		526140A227FB241D00ECB188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526140A127FB241D00ECB188 /* GoogleService-Info.plist */; };
 		6172F2D35A4C3AA820D92908 /* libPods-scream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-scream.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-scream-screamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-scream-screamTests.a */; };
@@ -38,6 +44,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = scream/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = scream/main.m; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-scream-screamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scream-screamTests.release.xcconfig"; path = "Target Support Files/Pods-scream-screamTests/Pods-scream-screamTests.release.xcconfig"; sourceTree = "<group>"; };
+		5232A44B280567E200D5191F /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		5232A44E280567FC00D5191F /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		5232A4512805682D00D5191F /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		526140A127FB241D00ECB188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-scream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-scream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-scream-screamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scream-screamTests.debug.xcconfig"; path = "Target Support Files/Pods-scream-screamTests/Pods-scream-screamTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +97,7 @@
 		13B07FAE1A68108700A75B9A /* scream */ = {
 			isa = PBXGroup;
 			children = (
+				5232A44A280566E000D5191F /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -108,6 +118,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		50A8AFD6FD9C42579E0593A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5232A44A280566E000D5191F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5232A44B280567E200D5191F /* FontAwesome.ttf */,
+				5232A4512805682D00D5191F /* Zocial.ttf */,
+				5232A44E280567FC00D5191F /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +152,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
+				50A8AFD6FD9C42579E0593A9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -204,7 +232,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -239,6 +267,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5232A450280567FC00D5191F /* MaterialIcons.ttf in Resources */,
+				5232A4532805682D00D5191F /* Zocial.ttf in Resources */,
+				5232A44D280567E200D5191F /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +279,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				5232A44F280567FC00D5191F /* MaterialIcons.ttf in Resources */,
 				526140A227FB241D00ECB188 /* GoogleService-Info.plist in Resources */,
+				5232A4522805682D00D5191F /* Zocial.ttf in Resources */,
+				5232A44C280567E200D5191F /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,13 +482,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C97AB639B58BBB4B15BBE30 /* Pods-scream-screamTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = screamTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,10 +510,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D0AE47A65C8663E3B452821 /* Pods-scream-screamTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = screamTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -594,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -653,7 +689,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet, TouchableHighlight, Linking} from 'react-native';
+
+import Icon from 'react-native-vector-icons/Zocial';
+import {
+  facebookApplicationURL,
+  twitterApplicationURL,
+  instagramApplicationURL,
+} from '../utils/ApplicationSettings';
 
 /**
  * @Component
@@ -10,17 +17,21 @@ export default function MultimediaKeyboard() {
   return (
     <View style={styles.wrap}>
       <View style={styles.keyboard}>
-        <Text>Este es el keyboard de multimedia</Text>
+        <TouchableHighlight
+          onPress={() => Linking.openURL(facebookApplicationURL)}>
+          <Icon name="facebook" />
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => Linking.openURL(twitterApplicationURL)}>
+          <Icon name="twitter" />
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => Linking.openURL(instagramApplicationURL)}>
+          <Icon name="instagram" />
+        </TouchableHighlight>
       </View>
-      {/* <View>
-        <Text>Esto es el Landing</Text>
-        <TouchableHighlight onPress={() => navigation.navigate('Login')}>
-          <Text>Ir al Login Pogin</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => navigation.navigate('Home')}>
-          <Text>Ir al Home</Text>
-        </TouchableHighlight>
-      </View> */}
     </View>
   );
 } // MultimediaKeyboard
