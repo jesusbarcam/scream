@@ -6,16 +6,17 @@ import LandingLogo from '../components/LandingLogo';
 import MultimediaKeyboard from '../components/MultimediaKeyboard';
 import {secondColor} from '../themes/colours';
 
-interface Props {
+type LandingProps = {
   navigation: any;
   authorized: boolean;
-}
+}; // LandingProps
+
 /**
  * @Component
  * @React_screen
  * @description
  */
-export default function Landing({navigation, authorized}: Props) {
+export default function Landing({navigation, authorized}: LandingProps) {
   if (authorized) {
     navigation.navigate('Home');
   } // If

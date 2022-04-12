@@ -6,6 +6,7 @@ import BackgroundLogo from '../assets/images/Background.svg';
 
 /**
  * @Component
+ * @React_component
  * @description
  */
 export default function LandingLogo() {

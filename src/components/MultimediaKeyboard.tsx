@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, TouchableHighlight, Linking} from 'react-native';
+import {View, StyleSheet, Linking} from 'react-native';
 
-import Icon from 'react-native-vector-icons/Zocial';
+import TouchableIcon from './TouchableIcon';
 import {
-  facebookApplicationURL,
-  twitterApplicationURL,
-  instagramApplicationURL,
+  DEFAULT_TWITTER_URL,
+  DEFAULT_FACEBOOK_URL,
+  DEFAULT_INSTAGRAM_URL,
 } from '../utils/ApplicationSettings';
 
 /**
@@ -17,20 +17,20 @@ export default function MultimediaKeyboard() {
   return (
     <View style={styles.wrap}>
       <View style={styles.keyboard}>
-        <TouchableHighlight
-          onPress={() => Linking.openURL(facebookApplicationURL)}>
-          <Icon name="facebook" />
-        </TouchableHighlight>
+        <TouchableIcon
+          name="facebook"
+          onPress={() => Linking.openURL(DEFAULT_FACEBOOK_URL)}
+        />
 
-        <TouchableHighlight
-          onPress={() => Linking.openURL(twitterApplicationURL)}>
-          <Icon name="twitter" />
-        </TouchableHighlight>
+        <TouchableIcon
+          name="twitter"
+          onPress={() => Linking.openURL(DEFAULT_TWITTER_URL)}
+        />
 
-        <TouchableHighlight
-          onPress={() => Linking.openURL(instagramApplicationURL)}>
-          <Icon name="instagram" />
-        </TouchableHighlight>
+        <TouchableIcon
+          name="instagram"
+          onPress={() => Linking.openURL(DEFAULT_INSTAGRAM_URL)}
+        />
       </View>
     </View>
   );
@@ -40,10 +40,13 @@ const styles = StyleSheet.create({
   wrap: {
     position: 'absolute',
     bottom: 50,
-    left: 20,
+    left: '10%',
+    right: '10%',
+    width: '100%',
   },
   keyboard: {
-    borderWidth: 2,
-    borderColor: 'red',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
   },
 });
