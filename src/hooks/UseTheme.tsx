@@ -1,12 +1,12 @@
-import {useEffect, useState, useContext} from 'react';
+import {useContext} from 'react';
 
 import {ApplicationContext} from '../contexts/ApplicationContext';
 
-export const darkThemeId = 'dark';
-export const lightThemeId = 'light';
+export const darkId = 'dark';
+export const lightId = 'light';
 
-type lightTypeId = typeof lightThemeId;
-type darkTypeId = typeof darkThemeId;
+type lightTypeId = typeof lightId;
+type darkTypeId = typeof darkId;
 export type ThemeId = darkTypeId | lightTypeId;
 
 /**
@@ -20,16 +20,9 @@ export const useTheme = () => {
   console.log('IN USE THEME -> ', state);
 
   const toggleTheme = () => {
-    const currentTheme = state?.UITheme;
-    console.log('CURRENT THEME -> ', currentTheme);
-    const nextTheme =
-      currentTheme === lightThemeId ? darkThemeId : lightThemeId;
+    const nextTheme = state?.UITheme === lightId ? darkId : lightId;
     setState({...state, UITheme: nextTheme});
   };
-
-  useEffect(() => {
-    console.log('\n\n\nUSE EFFECT --> ', state?.UITheme);
-  });
 
   return {theme: state?.UITheme, toggleTheme};
 }; // useTheme

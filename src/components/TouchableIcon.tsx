@@ -3,7 +3,7 @@ import {StyleSheet, TouchableHighlight} from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {DEFAULT_ICON_SIZE} from '../utils/ApplicationSettings';
-import {darkThemeId, useTheme} from '../hooks/UseTheme';
+import {darkId, useTheme} from '../hooks/UseTheme';
 import {DarkThemeColours} from '../themes/dark';
 import {LightThemeColours} from '../themes/light';
 
@@ -28,7 +28,7 @@ export default function TouchableIcon({
   // Calculate icon size
   const fontSize = size ?? DEFAULT_ICON_SIZE;
   const color =
-    theme === darkThemeId
+    theme === darkId
       ? DarkThemeColours.secondaryColour
       : LightThemeColours.secondaryColour;
 

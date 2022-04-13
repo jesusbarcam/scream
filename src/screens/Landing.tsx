@@ -4,7 +4,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 import LandingLogo from '../components/LandingLogo';
 import MultimediaKeyboard from '../components/MultimediaKeyboard';
-import {darkThemeId, useTheme} from '../hooks/UseTheme';
+import {darkId, useTheme} from '../hooks/UseTheme';
 import {DarkThemeColours} from '../themes/dark';
 import {LightThemeColours} from '../themes/light';
 
@@ -21,7 +21,7 @@ type LandingProps = {
 export default function Landing({navigation, authorized}: LandingProps) {
   const {theme} = useTheme();
   let backgroundColor =
-    theme === darkThemeId
+    theme === darkId
       ? DarkThemeColours.predominantColour
       : LightThemeColours.predominantColour;
 
