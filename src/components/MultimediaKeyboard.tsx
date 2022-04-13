@@ -7,6 +7,7 @@ import {
   DEFAULT_FACEBOOK_URL,
   DEFAULT_INSTAGRAM_URL,
 } from '../utils/ApplicationSettings';
+import {useTheme} from '../hooks/UseTheme';
 
 /**
  * @Component
@@ -14,6 +15,9 @@ import {
  * @description
  */
 export default function MultimediaKeyboard() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [theme, toggleTheme] = useTheme();
+
   return (
     <View style={styles.wrap}>
       <View style={styles.keyboard}>
@@ -31,6 +35,8 @@ export default function MultimediaKeyboard() {
           name="instagram"
           onPress={() => Linking.openURL(DEFAULT_INSTAGRAM_URL)}
         />
+
+        <TouchableIcon name="rocket" onPress={toggleTheme} />
       </View>
     </View>
   );

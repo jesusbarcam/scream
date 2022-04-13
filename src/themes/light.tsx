@@ -7,9 +7,9 @@ import {firstColor, secondColor, thirdColor} from './colours';
  * @description
  */
 export const LightThemeColours: Theme = {
-  predominantColour: secondColor,
-  secondaryColour: thirdColor,
-  highlightColour: firstColor,
+  predominantColour: secondColor, // Violet
+  secondaryColour: thirdColor, // White
+  highlightColour: firstColor, // Pink&red
   background: {backgroundColor: secondColor},
   text: {color: thirdColor},
 };

@@ -3,11 +3,14 @@ import {StyleSheet, TouchableHighlight} from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {DEFAULT_ICON_SIZE} from '../utils/ApplicationSettings';
+import {darkThemeId, useTheme} from '../hooks/UseTheme';
+import {DarkThemeColours} from '../themes/dark';
+import {LightThemeColours} from '../themes/light';
 
 type TouchableIconProps = {
   name: string;
   onPress: any;
-  fontSize?: number;
+  size?: number;
 };
 
 /**
@@ -18,21 +21,26 @@ type TouchableIconProps = {
 export default function TouchableIcon({
   name,
   onPress,
-  fontSize,
+  size,
 }: TouchableIconProps) {
+  const [theme] = useTheme();
+
   // Calculate icon size
-  const size = fontSize ?? DEFAULT_ICON_SIZE;
+  const fontSize = size ?? DEFAULT_ICON_SIZE;
+  const color =
+    theme === darkThemeId
+      ? DarkThemeColours.secondaryColour
+      : LightThemeColours.secondaryColour;
 
   return (
     <TouchableHighlight onPress={onPress}>
-      <Icon name={name} style={{...styles.icon, fontSize: size}} />
+      <Icon name={name} style={{...styles.icon, fontSize, color}} />
     </TouchableHighlight>
   );
 } // TouchableIcon
 
 const styles = StyleSheet.create({
   icon: {
-    color: 'white',
     opacity: 0.5,
   },
 }); // Styles

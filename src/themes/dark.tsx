@@ -5,10 +5,10 @@ import {firstColor, fourthColor, thirdColor} from './colours';
  * @colourTheme
  * @description
  */
-export const darkThemeColours: Theme = {
-  predominantColour: fourthColor,
-  secondaryColour: thirdColor,
-  highlightColour: firstColor,
+export const DarkThemeColours: Theme = {
+  predominantColour: fourthColor, // Pink
+  secondaryColour: thirdColor, // Violet
+  highlightColour: firstColor, // White
   background: {backgroundColor: fourthColor},
   text: {color: thirdColor},
 };
