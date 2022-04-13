@@ -2,12 +2,12 @@ import React from 'react';
 import {View, StyleSheet, Linking} from 'react-native';
 
 import TouchableIcon from './TouchableIcon';
+import {useTheme} from '../hooks/UseTheme';
 import {
   DEFAULT_TWITTER_URL,
   DEFAULT_FACEBOOK_URL,
   DEFAULT_INSTAGRAM_URL,
 } from '../utils/ApplicationSettings';
-import {useTheme} from '../hooks/UseTheme';
 
 /**
  * @Component
@@ -15,7 +15,6 @@ import {useTheme} from '../hooks/UseTheme';
  * @description
  */
 export default function MultimediaKeyboard() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [theme, toggleTheme] = useTheme();
 
   return (
