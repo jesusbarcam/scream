@@ -8,14 +8,14 @@ import Home from '../screens/Home';
 import Login from '../screens/Login';
 import Landing from '../screens/Landing';
 import {secondColor} from '../themes/colours';
-
-// Name constants of screen components
-const LANDING_COMPONENT_NAME = 'Landing';
-const HOME_COMPONENT_NAME = 'Home';
-const LOGIN_COMPONENT_NAME = 'Login';
+import {
+  LANDING_COMPONENT_NAME,
+  LOGIN_COMPONENT_NAME,
+  HOME_COMPONENT_NAME,
+} from '../utils/ApplicationSettings';
 
 // Create Stack navigator component
-// and your main styles.
+// and your default styles.
 const Stack = createStackNavigator();
 const navigationMainOptions: StackNavigationOptions = {
   title: '',
@@ -49,4 +49,4 @@ export default function MainRouter() {
       />
     </Stack.Navigator>
   );
-}
+} // MainRouter

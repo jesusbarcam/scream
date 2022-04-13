@@ -38,8 +38,9 @@ export default function MultimediaKeyboard() {
         {/*
         FIXME:
         Quitar el boton de cambio de tema de esta parte
-        y ponerlo en la vista de settings*/}
+        y ponerlo en la vista de settings
         <TouchableIcon name="rocket" onPress={toggleTheme} />
+        */}
       </View>
     </View>
   );

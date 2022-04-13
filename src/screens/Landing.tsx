@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import AuthAccess from '../components/AuthAcces';
 
 import LandingLogo from '../components/LandingLogo';
 import MultimediaKeyboard from '../components/MultimediaKeyboard';
@@ -10,7 +11,6 @@ import {LightThemeColours} from '../themes/light';
 
 type LandingProps = {
   navigation: any;
-  authorized: boolean;
 }; // LandingProps
 
 /**
@@ -18,28 +18,33 @@ type LandingProps = {
  * @React_screen
  * @description
  */
-export default function Landing({navigation, authorized}: LandingProps) {
+export default function Landing({navigation}: LandingProps) {
   const {theme} = useTheme();
+
   let backgroundColor =
     theme === darkId
       ? DarkThemeColours.predominantColour
       : LightThemeColours.predominantColour;
 
-  if (authorized) {
-    navigation.navigate('Home');
-  } // If
+  const authAccessNavigate = (screenName: string) => {
+    console.log('***********************************************************');
+    console.log('NAVIGATE TO -> ', screenName);
+    console.log('***********************************************************');
+    navigation.navigate(screenName);
+  };
 
   return (
-    <SafeAreaView style={{...styles.wrap, backgroundColor}}>
-      <LandingLogo />
-      <MultimediaKeyboard />
-    </SafeAreaView>
+    <AuthAccess navigate={authAccessNavigate}>
+      <SafeAreaView style={{...styles.wrap, backgroundColor}}>
+        <LandingLogo />
+        <MultimediaKeyboard />
+      </SafeAreaView>
+    </AuthAccess>
   );
 }
 
 /**
  * @Styles
- * @description
  */
 const styles = StyleSheet.create({
   wrap: {

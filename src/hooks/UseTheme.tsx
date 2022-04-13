@@ -17,8 +17,6 @@ export type ThemeId = darkTypeId | lightTypeId;
 export const useTheme = () => {
   const {state, setState} = useContext(ApplicationContext);
 
-  console.log('IN USE THEME -> ', state);
-
   const toggleTheme = () => {
     const nextTheme = state?.UITheme === lightId ? darkId : lightId;
     setState({...state, UITheme: nextTheme});
