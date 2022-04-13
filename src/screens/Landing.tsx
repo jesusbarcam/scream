@@ -4,7 +4,9 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 import LandingLogo from '../components/LandingLogo';
 import MultimediaKeyboard from '../components/MultimediaKeyboard';
-import {secondColor} from '../themes/colours';
+import {darkThemeId, useTheme} from '../hooks/UseTheme';
+import {DarkThemeColours} from '../themes/dark';
+import {LightThemeColours} from '../themes/light';
 
 type LandingProps = {
   navigation: any;
@@ -17,12 +19,18 @@ type LandingProps = {
  * @description
  */
 export default function Landing({navigation, authorized}: LandingProps) {
+  const [theme] = useTheme();
+  let backgroundColor =
+    theme === darkThemeId
+      ? DarkThemeColours.predominantColour
+      : LightThemeColours.predominantColour;
+
   if (authorized) {
     navigation.navigate('Home');
   } // If
 
   return (
-    <SafeAreaView style={styles.wrap}>
+    <SafeAreaView style={{...styles.wrap, backgroundColor}}>
       <LandingLogo />
       <MultimediaKeyboard />
     </SafeAreaView>
@@ -36,6 +44,5 @@ export default function Landing({navigation, authorized}: LandingProps) {
 const styles = StyleSheet.create({
   wrap: {
     flex: 1,
-    backgroundColor: secondColor,
   },
 });
