@@ -23,7 +23,7 @@ export default function TouchableIcon({
   onPress,
   size,
 }: TouchableIconProps) {
-  const [theme] = useTheme();
+  const {theme} = useTheme();
 
   // Calculate icon size
   const fontSize = size ?? DEFAULT_ICON_SIZE;

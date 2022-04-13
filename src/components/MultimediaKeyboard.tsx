@@ -15,7 +15,7 @@ import {
  * @description
  */
 export default function MultimediaKeyboard() {
-  const [theme, toggleTheme] = useTheme();
+  const {theme, toggleTheme} = useTheme();
 
   return (
     <View style={styles.wrap}>
@@ -35,6 +35,10 @@ export default function MultimediaKeyboard() {
           onPress={() => Linking.openURL(DEFAULT_INSTAGRAM_URL)}
         />
 
+        {/*
+        FIXME:
+        Quitar el boton de cambio de tema de esta parte
+        y ponerlo en la vista de settings*/}
         <TouchableIcon name="rocket" onPress={toggleTheme} />
       </View>
     </View>

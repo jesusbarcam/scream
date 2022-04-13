@@ -19,7 +19,7 @@ type LandingProps = {
  * @description
  */
 export default function Landing({navigation, authorized}: LandingProps) {
-  const [theme] = useTheme();
+  const {theme} = useTheme();
   let backgroundColor =
     theme === darkThemeId
       ? DarkThemeColours.predominantColour
