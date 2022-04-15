@@ -1,13 +1,22 @@
-export type Theme = {
-  predominantColour: string;
-  secondaryColour: string;
-  highlightColour: string;
-  text: {color: string};
-  background: {backgroundColor: string};
-};
+export const primaryColorKey = 'primaryColor';
+export const secondaryColorKey = 'secondaryColor';
+export const neutralColorKey = 'neutralColor';
+export const highlightColorKey = 'highlightColor';
 
-export type ThemeColours = {
-  primary: string;
-  secondary: string;
-  highlight: string;
+export const primaryColorLightness = 'primaryColorLightness';
+export const secondaryColorLightness = 'secondaryColorLightness';
+export const neutralColorLightness = 'neutralColorLightness';
+
+export type ColorThemeOption = typeof primaryColorKey | typeof secondaryColorKey | typeof neutralColorKey | typeof highlightColorKey;
+
+export interface ThemeColor {
+  base: string;
+  lightness: string;
+}
+
+export type Theme = {
+  [primaryColorKey]: ThemeColor;
+  [secondaryColorKey]: ThemeColor;
+  [neutralColorKey]: ThemeColor;
+  [highlightColorKey]: ThemeColor;
 };

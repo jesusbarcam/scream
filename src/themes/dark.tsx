@@ -1,14 +1,13 @@
 import {Theme} from '../models/Theme';
-import {firstColor, fourthColor, thirdColor} from './colours';
+import {firstBaseColor, thirdBaseColor, firstLightness, thirdLightness, fourthLightness, fourthBaseColor} from './colours';
 
 /**
  * @colourTheme
  * @description
  */
-export const DarkThemeColours: Theme = {
-  predominantColour: fourthColor, // Pink
-  secondaryColour: thirdColor, // Violet
-  highlightColour: firstColor, // White
-  background: {backgroundColor: fourthColor},
-  text: {color: thirdColor},
+export const DarkThemeColors: Theme = {
+  neutralColor: {base: firstBaseColor, lightness: firstLightness},
+  primaryColor: {base: thirdBaseColor, lightness: thirdLightness},
+  secondaryColor: {base: fourthBaseColor, lightness: fourthLightness},
+  highlightColor: {base: thirdBaseColor, lightness: thirdLightness},
 };

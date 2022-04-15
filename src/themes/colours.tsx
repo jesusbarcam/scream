@@ -1,36 +1,19 @@
-// First Colour
-//hsl(698,50%,50%)
-export const FIRST_BASE = '698,50%';
-const FIRST_LIGHTNESS = '50%';
+// First Color
+//hsl(0,0%,100%)
+export const firstBaseColor = '0, 0%';
+export const firstLightness = '100%';
 
-// Second Colour
+// Second Color
 //hsl(250, 50%, 50%)
-export const SECOND_BASE = '250, 50%';
-const SECOND_LIGHTNESS = '50%';
+export const secondBaseColor = '250, 50%';
+export const secondLightness = '50%';
 
-// Third Colour
-//hsl(360,100%,100%)
-export const THIRD_BASE = '360, 100%';
-const THIRD_LIGHTNESS = '100%';
+// Third Color
+//hsl(698,50%,50%)
+export const thirdBaseColor = '698,50%';
+export const thirdLightness = '50%';
 
-// Fourth Colour
-//hsl(950,10%,10%)
-export const FOURTH_BASE = '950,10%';
-const FOURTH_LIGHTNESS = '10%';
-
-// Fifth Colour
-//hsl(0,0%,0%)
-export const FIFTH_BASE = '0,0%';
-const FIFTH_LIGHTNESS = '0%';
-
-/**
- * @constants
- * * All Colours used in application
- */
-export const firstColor = `hsl(${FIRST_BASE}, ${FIRST_LIGHTNESS})`;
-export const secondColor = `hsl(${SECOND_BASE}, ${SECOND_LIGHTNESS})`;
-export const thirdColor = `hsl(${THIRD_BASE}, ${THIRD_LIGHTNESS})`;
-export const fourthColor = `hsl(${FOURTH_BASE},${FOURTH_LIGHTNESS})`;
-export const fifthColor = `hsl(${FIFTH_BASE},${FIFTH_LIGHTNESS})`;
-//export const sixth = '';
-//export const seventh = '';
+// fourth Color
+//hsl(200,30%,14%)
+export const fourthBaseColor = '200,30%';
+export const fourthLightness = '14%';

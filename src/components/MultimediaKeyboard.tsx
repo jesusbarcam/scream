@@ -3,11 +3,7 @@ import {View, StyleSheet, Linking} from 'react-native';
 
 import TouchableIcon from './TouchableIcon';
 import {useTheme} from '../hooks/UseTheme';
-import {
-  DEFAULT_TWITTER_URL,
-  DEFAULT_FACEBOOK_URL,
-  DEFAULT_INSTAGRAM_URL,
-} from '../utils/ApplicationSettings';
+import {DEFAULT_TWITTER_URL, DEFAULT_FACEBOOK_URL, DEFAULT_INSTAGRAM_URL} from '../utils/ApplicationSettings';
 
 /**
  * @Component
@@ -20,20 +16,11 @@ export default function MultimediaKeyboard() {
   return (
     <View style={styles.wrap}>
       <View style={styles.keyboard}>
-        <TouchableIcon
-          name="facebook"
-          onPress={() => Linking.openURL(DEFAULT_FACEBOOK_URL)}
-        />
+        <TouchableIcon name="facebook" onPress={() => Linking.openURL(DEFAULT_FACEBOOK_URL)} />
 
-        <TouchableIcon
-          name="twitter"
-          onPress={() => Linking.openURL(DEFAULT_TWITTER_URL)}
-        />
+        <TouchableIcon name="twitter" onPress={() => Linking.openURL(DEFAULT_TWITTER_URL)} />
 
-        <TouchableIcon
-          name="instagram"
-          onPress={() => Linking.openURL(DEFAULT_INSTAGRAM_URL)}
-        />
+        <TouchableIcon name="instagram" onPress={() => Linking.openURL(DEFAULT_INSTAGRAM_URL)} />
 
         {/*
         FIXME:
