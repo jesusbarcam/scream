@@ -5,9 +5,7 @@ import AuthAccess from '../components/AuthAcces';
 
 import LandingLogo from '../components/LandingLogo';
 import MultimediaKeyboard from '../components/MultimediaKeyboard';
-import {darkId, useTheme} from '../hooks/UseTheme';
-import {DarkThemeColours} from '../themes/dark';
-import {LightThemeColours} from '../themes/light';
+import {useUIColors} from '../hooks/UseUIColors';
 
 type LandingProps = {
   navigation: any;
@@ -19,12 +17,7 @@ type LandingProps = {
  * @description
  */
 export default function Landing({navigation}: LandingProps) {
-  const {theme} = useTheme();
-
-  let backgroundColor =
-    theme === darkId
-      ? DarkThemeColours.predominantColour
-      : LightThemeColours.predominantColour;
+  const backgroundColor = useUIColors('secondaryColor');
 
   const authAccessNavigate = (screenName: string) => {
     console.log('***********************************************************');

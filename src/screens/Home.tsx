@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
-import {useTheme, darkId} from '../hooks/UseTheme';
-import {LightThemeColours} from '../themes/light';
-import {DarkThemeColours} from '../themes/dark';
 
+import {useUIColors} from '../hooks/UseUIColors';
 interface UserAccount {
   name: string;
   surname: string;
@@ -46,12 +44,8 @@ async function loadUser() {
  */
 export default function Home() {
   const [data, setData] = useState<UserAccount>();
-  const {theme} = useTheme();
-
-  const backgroundColor =
-    theme === darkId
-      ? DarkThemeColours.predominantColour
-      : LightThemeColours.predominantColour;
+  const backgroundColor = useUIColors('secondaryColor');
+  const color = useUIColors('neutralColor');
 
   async function fetchUserAccountData() {
     const account = await loadAccount();
@@ -69,14 +63,14 @@ export default function Home() {
 
   return (
     <View style={{...styles.wrap, backgroundColor}}>
-      <Text>Esto es el inicio de algo que va a ser muy bonito!</Text>
+      <Text style={{color}}>Esto es el inicio de algo que va a ser muy bonito!</Text>
 
       {data ? (
         <View>
-          <Text>{data.account.user}</Text>
-          <Text>{data.name}</Text>
-          <Text>{data.surname}</Text>
-          <Text>{data.address}</Text>
+          <Text style={{color}}>{data.account.user}</Text>
+          <Text style={{color}}>{data.name}</Text>
+          <Text style={{color}}>{data.surname}</Text>
+          <Text style={{color}}>{data.address}</Text>
         </View>
       ) : null}
     </View>

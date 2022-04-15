@@ -15,6 +15,9 @@ export const MainStyleSheet = StyleSheet.create({
   paragraph: {
     fontSize: 12,
   },
+  fontFamily: {
+    fontFamily: 'Raleway',
+  },
   testBox: {
     height: 5,
     width: '65%',

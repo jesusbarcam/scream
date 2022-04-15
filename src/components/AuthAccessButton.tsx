@@ -1,5 +1,9 @@
 import React from 'react';
-import {Button, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+
+import {useUIColors} from '../hooks/UseUIColors';
+import {MainStyleSheet} from '../themes/main';
+import {HOME_COMPONENT_NAME} from '../utils/ApplicationSettings';
 
 /**
  * @Component
@@ -7,12 +11,12 @@ import {Button, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
  * @description
  */
 export default function AuthAccessButton({navigate}: any) {
+  const backgroundColor = useUIColors('secondaryColor', '35%');
+  const color = useUIColors('neutralColor', '100%');
   return (
     <View style={styles.wrap}>
-      <TouchableHighlight
-        style={styles.button}
-        onPress={() => navigate('Home')}>
-        <Text>Enter</Text>
+      <TouchableHighlight style={{...styles.button, backgroundColor}} onPress={() => navigate(HOME_COMPONENT_NAME)}>
+        <Text style={(MainStyleSheet.fontFamily, {...styles.buttonText, color})}>Enter</Text>
       </TouchableHighlight>
     </View>
   );
@@ -28,9 +32,19 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   button: {
-    fontSize: '375px',
-    borderWidth: 1,
-    borderColor: 'red',
-    width: 60,
+    borderRadius: 3,
+    padding: 10,
+    paddingHorizontal: 50,
+    justifyContent: 'center',
+    elevation: 10,
+    shadowOpacity: 0.7,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+  },
+  buttonText: {
+    textAlign: 'center',
+    fontSize: 25,
   },
 });
