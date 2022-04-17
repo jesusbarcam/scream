@@ -5,11 +5,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {DEFAULT_ICON_SIZE} from '../utils/ApplicationSettings';
 import {useUIColors} from '../hooks/UseUIColors';
 
+/**
+ * @type
+ * @Typescript
+ */
 type TouchableIconProps = {
   name: string;
   onPress: any;
   size?: number;
-};
+}; // TouchableIconProps
 
 /**
  * @Component

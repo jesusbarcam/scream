@@ -4,28 +4,24 @@ import {View, StyleSheet} from 'react-native';
 import AuthAccessButton from './AuthAccessButton';
 import AuthActionsPanel from './AuthActionsPanel';
 
+/**
+ * @type
+ * @Typescript
+ */
 type AuthAccessProps = {
   children: any;
-  navigate: any;
-};
+}; // AuthAccessProps
 
 /**
  * @Component
  * @React_component
  * @description
  */
-export default function AuthAccess({children, navigate}: AuthAccessProps) {
+export default function AuthAccess({children}: AuthAccessProps) {
   const authorizedUser = false;
   return (
     <View style={styles.wrap}>
-      {authorizedUser ? (
-        // Create enter component
-        <AuthAccessButton navigate={navigate} />
-      ) : (
-        // Create Login or Registry component
-        <AuthActionsPanel />
-      )}
-
+      {authorizedUser ? <AuthAccessButton /> : <AuthActionsPanel />}
       <View style={styles.wrap}>{children}</View>
     </View>
   );
@@ -37,6 +33,5 @@ export default function AuthAccess({children, navigate}: AuthAccessProps) {
 const styles = StyleSheet.create({
   wrap: {
     flex: 1,
-    borderWidth: 2,
   },
 }); // Styles

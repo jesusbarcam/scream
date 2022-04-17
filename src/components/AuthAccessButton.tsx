@@ -1,23 +1,30 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import {useUIColors} from '../hooks/UseUIColors';
 import {MainStyleSheet} from '../themes/main';
-import {HOME_COMPONENT_NAME} from '../utils/ApplicationSettings';
+import {HOME_SCREEN_NAME} from '../utils/ApplicationSettings';
 
 /**
  * @Component
  * @React_component
  * @description
  */
-export default function AuthAccessButton({navigate}: any) {
-  const backgroundColor = useUIColors('secondaryColor', '35%');
+export default function AuthAccessButton() {
+  const router = useNavigation();
+  const backgroundColor = useUIColors('secondaryColor', '30%');
   const color = useUIColors('neutralColor', '100%');
+  const detailsColor = useUIColors('neutralColor', '100%', 0.65);
+
   return (
     <View style={styles.wrap}>
-      <TouchableHighlight style={{...styles.button, backgroundColor}} onPress={() => navigate(HOME_COMPONENT_NAME)}>
-        <Text style={(MainStyleSheet.fontFamily, {...styles.buttonText, color})}>Enter</Text>
-      </TouchableHighlight>
+      <View style={{...styles.buttonWrapper, backgroundColor}}>
+        <TouchableHighlight onPress={() => router.navigate(HOME_SCREEN_NAME)}>
+          <Text style={(MainStyleSheet.fontFamily, {...styles.buttonText, color})}>Enter</Text>
+        </TouchableHighlight>
+        <Text style={{...styles.summary, color: detailsColor}}>Haz click para disfrutar de la diversión de gritar sin sentido</Text>
+      </View>
     </View>
   );
 } // AuthAccessButton
@@ -31,20 +38,21 @@ const styles = StyleSheet.create({
     height: '25%',
     zIndex: 1,
   },
-  button: {
-    borderRadius: 3,
-    padding: 10,
-    paddingHorizontal: 50,
+  buttonWrapper: {
+    width: '100%',
+    padding: 15,
     justifyContent: 'center',
-    elevation: 10,
-    shadowOpacity: 0.7,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
+    alignItems: 'center',
   },
   buttonText: {
     textAlign: 'center',
     fontSize: 25,
+    fontWeight: 'bold',
+  },
+  summary: {
+    marginTop: 5,
+    textAlign: 'center',
+    fontSize: 12,
+    width: '70%',
   },
 });

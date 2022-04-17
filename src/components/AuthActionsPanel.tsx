@@ -1,8 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 
-import {useUIColors} from '../hooks/UseUIColors';
 import AuthActionsButtons from './AuthActionsButtons';
 
 /**
@@ -15,8 +13,6 @@ import AuthActionsButtons from './AuthActionsButtons';
  * within the application.
  */
 export default function AuthActionsPanel() {
-  const {navigate} = useNavigation();
-
   /**
    * @method
    * @description
