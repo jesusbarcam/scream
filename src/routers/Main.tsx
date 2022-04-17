@@ -4,12 +4,18 @@ import {createStackNavigator, StackNavigationOptions} from '@react-navigation/st
 import Home from '../screens/Home';
 import Login from '../screens/Login';
 import Landing from '../screens/Landing';
-import {LANDING_COMPONENT_NAME, LOGIN_COMPONENT_NAME, HOME_COMPONENT_NAME} from '../utils/ApplicationSettings';
+import {LANDING_SCREEN_NAME, LOGIN_SCREEN_NAME, HOME_SCREEN_NAME} from '../utils/ApplicationSettings';
 import {useUIColors} from '../hooks/UseUIColors';
+
+export type RootStackScreenNames = {
+  [LANDING_SCREEN_NAME]: undefined;
+  [LOGIN_SCREEN_NAME]: undefined;
+  [HOME_SCREEN_NAME]: undefined;
+};
 
 // Create Stack navigator component
 // and your default styles.
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackScreenNames>();
 
 /**
  * @component
@@ -28,9 +34,9 @@ export default function MainRouter() {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name={LANDING_COMPONENT_NAME} component={Landing} options={{...navigationMainOptions, headerShown: false}} />
-      <Stack.Screen name={LOGIN_COMPONENT_NAME} component={Login} options={navigationMainOptions} />
-      <Stack.Screen name={HOME_COMPONENT_NAME} component={Home} options={navigationMainOptions} />
+      <Stack.Screen name={LANDING_SCREEN_NAME} component={Landing} options={{...navigationMainOptions, headerShown: false}} />
+      <Stack.Screen name={LOGIN_SCREEN_NAME} component={Login} options={navigationMainOptions} />
+      <Stack.Screen name={HOME_SCREEN_NAME} component={Home} options={navigationMainOptions} />
     </Stack.Navigator>
   );
 } // MainRouter
