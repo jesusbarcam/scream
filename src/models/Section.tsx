@@ -1,0 +1,14 @@
+import {
+  LOGIN_SECTION_NAME,
+  REGISTRY_SECTION_NAME,
+  DASHBOARD_SECTION_NAME,
+  SETTING_SECTION_NAME,
+  LANDING_SECTION_NAME,
+} from '../utils/ApplicationSettings';
+
+export type Section =
+  | typeof LOGIN_SECTION_NAME
+  | typeof REGISTRY_SECTION_NAME
+  | typeof LANDING_SECTION_NAME
+  | typeof DASHBOARD_SECTION_NAME
+  | typeof SETTING_SECTION_NAME;

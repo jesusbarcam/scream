@@ -8,7 +8,8 @@ export const DEFAULT_INSTAGRAM_URL = 'https://instagram.com';
 export const DEFAULT_UI_THEME: ThemeId = lightId;
 export const DEFAULT_ICON_SIZE = 32;
 
-// Name constants of screen components
-export const LANDING_SCREEN_NAME = 'landing';
-export const HOME_SCREEN_NAME = 'home';
-export const LOGIN_SCREEN_NAME = 'login';
+export const LANDING_SECTION_NAME = 'landing';
+export const DASHBOARD_SECTION_NAME = 'dashboard';
+export const LOGIN_SECTION_NAME = 'login';
+export const REGISTRY_SECTION_NAME = 'registry';
+export const SETTING_SECTION_NAME = 'Settings';

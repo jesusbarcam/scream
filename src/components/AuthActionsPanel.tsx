@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, StyleSheet} from 'react-native';
 
+import {ApplicationContext} from '../contexts/ApplicationContext';
+import {Section} from '../models/Section';
+import {REGISTRY_SECTION_NAME} from '../utils/ApplicationSettings';
 import AuthActionsButtons from './AuthActionsButtons';
+import Registry from './Registry';
+
+/**
+ * @type
+ * @Typescript
+ */
+export const RegistryPanelName = 'registry';
+export const LoginPanelName = 'login';
+export const DeactivatePanelName = 'empty';
+export type ActionPanel = typeof RegistryPanelName | typeof LoginPanelName | typeof DeactivatePanelName;
 
 /**
  * @Component
@@ -13,29 +26,33 @@ import AuthActionsButtons from './AuthActionsButtons';
  * within the application.
  */
 export default function AuthActionsPanel() {
+  const {state} = useContext(ApplicationContext);
+
   /**
+   *
    * @method
    * @description
-   * Activate login or Registry section
-   * when they are selected in authActionsButtons component
+   * Check if current section is equal to
+   * next section arrive from parameter
    */
-  const actionSelection = (action: string) => {
-    console.log('Activamos el ' + action);
-  };
+  const isActivated = (section: Section) => {
+    return state?.section === section;
+  }; // IsActivated
 
   return (
     <View style={styles.wrap}>
-      <AuthActionsButtons actionSelection={actionSelection} />
+      <Registry active={isActivated(REGISTRY_SECTION_NAME)} />
+      <AuthActionsButtons />
     </View>
   );
 } // AuthActionsPanel
 
 const styles = StyleSheet.create({
   wrap: {
+    alignItems: 'flex-start',
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center',
-    height: '20%',
+    height: '85%',
     position: 'absolute',
     width: '100%',
     zIndex: 1,

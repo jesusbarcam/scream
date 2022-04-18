@@ -1,17 +1,20 @@
 import React from 'react';
-import {createStackNavigator, StackNavigationOptions} from '@react-navigation/stack';
+import {createStackNavigator, StackNavigationOptions, StackNavigationProp} from '@react-navigation/stack';
 
-import Home from '../screens/Home';
+import Dashboard from '../screens/Dashboard';
 import Login from '../screens/Login';
 import Landing from '../screens/Landing';
-import {LANDING_SCREEN_NAME, LOGIN_SCREEN_NAME, HOME_SCREEN_NAME} from '../utils/ApplicationSettings';
 import {useUIColors} from '../hooks/UseUIColors';
+import {LANDING_SECTION_NAME, LOGIN_SECTION_NAME, DASHBOARD_SECTION_NAME} from '../utils/ApplicationSettings';
 
 export type RootStackScreenNames = {
-  [LANDING_SCREEN_NAME]: undefined;
-  [LOGIN_SCREEN_NAME]: undefined;
-  [HOME_SCREEN_NAME]: undefined;
+  [LANDING_SECTION_NAME]: undefined;
+  [LOGIN_SECTION_NAME]: undefined;
+  [DASHBOARD_SECTION_NAME]: undefined;
 };
+
+// Create type of Screen Sections names
+export type ScreenSectionNameListProp = StackNavigationProp<RootStackScreenNames, typeof LANDING_SECTION_NAME>;
 
 // Create Stack navigator component
 // and your default styles.
@@ -34,9 +37,9 @@ export default function MainRouter() {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name={LANDING_SCREEN_NAME} component={Landing} options={{...navigationMainOptions, headerShown: false}} />
-      <Stack.Screen name={LOGIN_SCREEN_NAME} component={Login} options={navigationMainOptions} />
-      <Stack.Screen name={HOME_SCREEN_NAME} component={Home} options={navigationMainOptions} />
+      <Stack.Screen name={LANDING_SECTION_NAME} component={Landing} options={{...navigationMainOptions, headerShown: false}} />
+      <Stack.Screen name={LOGIN_SECTION_NAME} component={Login} options={navigationMainOptions} />
+      <Stack.Screen name={DASHBOARD_SECTION_NAME} component={Dashboard} options={navigationMainOptions} />
     </Stack.Navigator>
   );
 } // MainRouter

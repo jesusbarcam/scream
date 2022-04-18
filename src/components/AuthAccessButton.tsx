@@ -4,7 +4,8 @@ import {useNavigation} from '@react-navigation/native';
 
 import {useUIColors} from '../hooks/UseUIColors';
 import {MainStyleSheet} from '../themes/main';
-import {HOME_SCREEN_NAME} from '../utils/ApplicationSettings';
+import {ScreenSectionNameListProp} from '../routers/Main';
+import {DASHBOARD_SECTION_NAME} from '../utils/ApplicationSettings';
 
 /**
  * @Component
@@ -12,7 +13,7 @@ import {HOME_SCREEN_NAME} from '../utils/ApplicationSettings';
  * @description
  */
 export default function AuthAccessButton() {
-  const router = useNavigation();
+  const router = useNavigation<ScreenSectionNameListProp>();
   const backgroundColor = useUIColors('secondaryColor', '30%');
   const color = useUIColors('neutralColor', '100%');
   const detailsColor = useUIColors('neutralColor', '100%', 0.65);
@@ -20,7 +21,7 @@ export default function AuthAccessButton() {
   return (
     <View style={styles.wrap}>
       <View style={{...styles.buttonWrapper, backgroundColor}}>
-        <TouchableHighlight onPress={() => router.navigate(HOME_SCREEN_NAME)}>
+        <TouchableHighlight onPress={() => router.navigate(DASHBOARD_SECTION_NAME)}>
           <Text style={(MainStyleSheet.fontFamily, {...styles.buttonText, color})}>Enter</Text>
         </TouchableHighlight>
         <Text style={{...styles.summary, color: detailsColor}}>Haz click para disfrutar de la diversión de gritar sin sentido</Text>
