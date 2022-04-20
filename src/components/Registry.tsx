@@ -1,10 +1,9 @@
-import React, {useContext} from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
-import {ApplicationContext} from '../contexts/ApplicationContext';
 import {useUIColors} from '../hooks/UseUIColors';
-import {Section} from '../models/Section';
-import {LANDING_SECTION_NAME} from '../utils/ApplicationSettings';
+import BackButton from './AccessBackButton';
+import RegistryForm from './RegistryForm';
 
 /**
  * @type
@@ -20,25 +19,18 @@ type RegistryProps = {
  * @description
  */
 export default function Registry({active}: RegistryProps) {
-  const {state, setState} = useContext(ApplicationContext);
-  const backgroundColor = useUIColors('neutralColor', '100%');
   const display = active ? 'flex' : 'none';
   const height = active ? '90%' : '0%';
 
-  /**
-   * @method
-   * @description
-   */
-  const changeSection = (section: Section) => {
-    setState({...state, section});
-  }; // ChangeSection
-
   return (
     <View style={{...styles.wrap, display}}>
-      <View style={{...styles.inner, backgroundColor, height}}>
-        <Text>Esto es el registro!</Text>
+      <View style={{...styles.formWrapper, height}}>
+        <RegistryForm />
       </View>
-      <Button title="Back" onPress={() => changeSection(LANDING_SECTION_NAME)} />
+
+      <View style={styles.backButtonWrapper}>
+        <BackButton />
+      </View>
     </View>
   );
 }
@@ -52,8 +44,11 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     zIndex: 1,
   },
-  inner: {
-    borderBottomStartRadius: 25,
-    borderBottomEndRadius: 25,
+  formWrapper: {
+    marginBottom: 20,
+  },
+
+  backButtonWrapper: {
+    alignItems: 'center',
   },
 });

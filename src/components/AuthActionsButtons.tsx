@@ -13,6 +13,7 @@ import {LOGIN_SECTION_NAME, REGISTRY_SECTION_NAME} from '../utils/ApplicationSet
  */
 export default function AuthActionsButtons() {
   const {state, setState} = useContext(ApplicationContext);
+  // Colors from current theme
   const backgroundColor = useUIColors('secondaryColor', '30%');
   const color = useUIColors('neutralColor', '100%');
   const detailsColor = useUIColors('neutralColor', '100%', 0.65);
