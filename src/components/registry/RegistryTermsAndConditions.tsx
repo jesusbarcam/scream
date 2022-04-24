@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
 import {useUIColors} from '../../hooks/UseUIColors';
+import CheckField from '../shared/CheckField';
 
 /**
  * @Component
@@ -11,6 +12,14 @@ import {useUIColors} from '../../hooks/UseUIColors';
 export default function RegistryTermsAndConditions() {
   const color = useUIColors('primaryColor', '35%');
 
+  /**
+   * @method
+   * @description
+   */
+  const whenCheckBoxChanged = (state: boolean) => {
+    console.log('El CheckField state ha cambiado -> ', state);
+  }; // WhenCheckBoxChanged
+
   return (
     <View style={styles.wrap}>
       <Text style={{...styles.text, color}}>
@@ -18,6 +27,7 @@ export default function RegistryTermsAndConditions() {
         the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
         centuries, but also the leap into electronic typesetting,
       </Text>
+      <CheckField summary="Estoy de acuerdo con los terminos y condiciones" changeState={state => whenCheckBoxChanged(state)} />
     </View>
   );
 } // RegistryTermsAndConditions
@@ -25,7 +35,9 @@ export default function RegistryTermsAndConditions() {
 const styles = StyleSheet.create({
   wrap: {
     flex: 2,
-    justifyContent: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start',
   },
   text: {
     fontSize: 11,
