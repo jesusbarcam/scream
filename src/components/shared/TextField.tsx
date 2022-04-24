@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, TextInput} from 'react-native';
 
-import {useUIColors} from '../hooks/UseUIColors';
+import {useUIColors} from '../../hooks/UseUIColors';
 
 /**
  * @Component

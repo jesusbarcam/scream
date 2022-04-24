@@ -2,8 +2,8 @@ import React from 'react';
 import {View, StyleSheet, Text, Button} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-import {useUIColors} from '../hooks/UseUIColors';
-import TextField from './TextField';
+import {useUIColors} from '../../hooks/UseUIColors';
+import TextField from '../shared/TextField';
 import PasswordFieldsGroup from './PasswordFieldsGroup';
 
 /**

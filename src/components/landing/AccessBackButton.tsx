@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 
-import {useUIColors} from '../hooks/UseUIColors';
-import {ApplicationContext} from '../contexts/ApplicationContext';
-import {LANDING_SECTION_NAME} from '../utils/ApplicationSettings';
-import {Section} from '../models/Section';
+import {useUIColors} from '../../hooks/UseUIColors';
+import {ApplicationContext} from '../../contexts/ApplicationContext';
+import {LANDING_SECTION_NAME} from '../../utils/ApplicationSettings';
+import {Section} from '../../models/Section';
 
 /**
  * @Component

@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-import {Section} from '../models/Section';
-import {useUIColors} from '../hooks/UseUIColors';
-import {ApplicationContext} from '../contexts/ApplicationContext';
-import {LOGIN_SECTION_NAME, REGISTRY_SECTION_NAME} from '../utils/ApplicationSettings';
+import {Section} from '../../models/Section';
+import {useUIColors} from '../../hooks/UseUIColors';
+import {ApplicationContext} from '../../contexts/ApplicationContext';
+import {LOGIN_SECTION_NAME, REGISTRY_SECTION_NAME} from '../../utils/ApplicationSettings';
 
 /**
  * @Component

@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import Logo from '../assets/images/logo.svg';
-import BackgroundLogo from '../assets/images/Background.svg';
+import Logo from '../../assets/images/logo.svg';
+import BackgroundLogo from '../../assets/images/Background.svg';
 
 /**
  * @Component

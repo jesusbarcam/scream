@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableHighlight} from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {DEFAULT_ICON_SIZE} from '../utils/ApplicationSettings';
+import {DEFAULT_ICON_SIZE} from '../../utils/ApplicationSettings';
 
 /**
  * @Component

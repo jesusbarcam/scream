@@ -1,11 +1,11 @@
 import React, {useContext} from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import {ApplicationContext} from '../contexts/ApplicationContext';
-import {Section} from '../models/Section';
-import {REGISTRY_SECTION_NAME} from '../utils/ApplicationSettings';
+import {ApplicationContext} from '../../contexts/ApplicationContext';
+import {Section} from '../../models/Section';
+import {REGISTRY_SECTION_NAME} from '../../utils/ApplicationSettings';
 import AuthActionsButtons from './AuthActionsButtons';
-import Registry from './Registry';
+import Registry from '../registry/Registry';
 
 /**
  * @type

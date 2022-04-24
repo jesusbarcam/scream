@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-import {useUIColors} from '../hooks/UseUIColors';
-import BackButton from './AccessBackButton';
+import {useUIColors} from '../../hooks/UseUIColors';
+import BackButton from '../landing/AccessBackButton';
 import RegistryForm from './RegistryForm';
 
 /**

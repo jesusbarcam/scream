@@ -2,9 +2,9 @@ import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {StyleSheet} from 'react-native';
 
-import MultimediaKeyboard from '../components/MultimediaKeyboard';
-import LandingLogo from '../components/LandingLogo';
-import AuthAccess from '../components/AuthAcces';
+import MultimediaKeyboard from '../components/landing/MultimediaKeyboard';
+import LandingLogo from '../components/landing/LandingLogo';
+import AuthAccess from '../components/landing/AuthAcces';
 import {useUIColors} from '../hooks/UseUIColors';
 
 /**

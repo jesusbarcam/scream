@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, StyleSheet, Linking} from 'react-native';
 
-import TouchableIcon from './TouchableIcon';
-import {useTheme} from '../hooks/UseTheme';
-import {DEFAULT_TWITTER_URL, DEFAULT_FACEBOOK_URL, DEFAULT_INSTAGRAM_URL} from '../utils/ApplicationSettings';
-import {useUIColors} from '../hooks/UseUIColors';
+import TouchableIcon from '../shared/TouchableIcon';
+import {useTheme} from '../../hooks/UseTheme';
+import {DEFAULT_TWITTER_URL, DEFAULT_FACEBOOK_URL, DEFAULT_INSTAGRAM_URL} from '../../utils/ApplicationSettings';
+import {useUIColors} from '../../hooks/UseUIColors';
 
 /**
  * @Component

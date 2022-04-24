@@ -2,10 +2,10 @@ import React from 'react';
 import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import {useUIColors} from '../hooks/UseUIColors';
-import {MainStyleSheet} from '../themes/main';
-import {ScreenSectionNameListProp} from '../routers/Main';
-import {DASHBOARD_SECTION_NAME} from '../utils/ApplicationSettings';
+import {useUIColors} from '../../hooks/UseUIColors';
+import {MainStyleSheet} from '../../themes/main';
+import {ScreenSectionNameListProp} from '../../routers/Main';
+import {DASHBOARD_SECTION_NAME} from '../../utils/ApplicationSettings';
 
 /**
  * @Component

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useUIColors} from '../hooks/UseUIColors';
+import {useUIColors} from '../../hooks/UseUIColors';
 
-import TextField from './TextField';
-import TouchableIcon from './TouchableIcon';
+import TextField from '../shared/TextField';
+import TouchableIcon from '../shared/TouchableIcon';
 
 export const VISIBILITY_ICON_NAME = 'eye';
 export const UNVISIBILITY_ICON_NAME = 'eye-slash';
