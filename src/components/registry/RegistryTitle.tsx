@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1.5,
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    marginBottom: 35,
+    marginTop: 25,
   },
   text: {
     width: '85%',

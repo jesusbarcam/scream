@@ -12,7 +12,7 @@ import PasswordFieldsGroup from './PasswordFieldsGroup';
 export default function RegistryForm() {
   return (
     <View style={styles.form}>
-      <TextField placeholder="Nombre Usuario" />
+      <TextField placeholder="Nombre Usuario" autofocus={true} />
       <TextField placeholder="Correo Electronico" />
       <PasswordFieldsGroup />
     </View>
