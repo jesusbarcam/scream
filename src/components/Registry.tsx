@@ -51,4 +51,7 @@ const styles = StyleSheet.create({
   backButtonWrapper: {
     alignItems: 'center',
   },
+  copyrightText: {
+    flex: 1,
+  },
 });

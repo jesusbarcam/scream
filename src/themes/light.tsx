@@ -1,5 +1,5 @@
 import {Theme} from '../models/Theme';
-import {firstBaseColor, secondBaseColor, firstLightness, secondLightness} from './colours';
+import {firstBaseColor, secondBaseColor, firstLightness, secondLightness, thirdBaseColor, thirdLightness} from './colours';
 
 /**
  * @colourTheme
@@ -7,7 +7,7 @@ import {firstBaseColor, secondBaseColor, firstLightness, secondLightness} from '
  */
 export const LightThemeColors: Theme = {
   neutralColor: {base: firstBaseColor, lightness: firstLightness},
-  primaryColor: {base: firstBaseColor, lightness: firstLightness},
+  primaryColor: {base: thirdBaseColor, lightness: thirdLightness},
   secondaryColor: {base: secondBaseColor, lightness: secondLightness},
   highlightColor: {base: firstBaseColor, lightness: firstLightness},
 };

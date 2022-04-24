@@ -3,32 +3,19 @@ import {TouchableHighlight} from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {DEFAULT_ICON_SIZE} from '../utils/ApplicationSettings';
-import {useUIColors} from '../hooks/UseUIColors';
-
-/**
- * @type
- * @Typescript
- */
-type TouchableIconProps = {
-  name: string;
-  onPress: any;
-  size?: number;
-}; // TouchableIconProps
 
 /**
  * @Component
  * @React_component
  * @description
  */
-export default function TouchableIcon({name, onPress, size}: TouchableIconProps) {
-  const color = useUIColors('neutralColor', '100%', 0.35);
-
+export default function TouchableIcon(parameters: any) {
   // Calculate icon size
-  const fontSize = size ?? DEFAULT_ICON_SIZE;
+  const fontSize = parameters?.size ?? DEFAULT_ICON_SIZE;
 
   return (
-    <TouchableHighlight onPress={onPress}>
-      <Icon name={name} style={{fontSize, color}} />
+    <TouchableHighlight {...parameters?.onPress}>
+      <Icon {...parameters} style={{fontSize, ...parameters?.style}} />
     </TouchableHighlight>
   );
 } // TouchableIcon
