@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'flex-start',
+    padding: 13,
   },
   text: {
     fontSize: 11,
