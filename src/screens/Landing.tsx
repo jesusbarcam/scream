@@ -1,33 +1,22 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import AuthAccess from '../components/AuthAcces';
+import {StyleSheet} from 'react-native';
 
-import LandingLogo from '../components/LandingLogo';
-import MultimediaKeyboard from '../components/MultimediaKeyboard';
+import MultimediaKeyboard from '../components/landing/MultimediaKeyboard';
+import LandingLogo from '../components/landing/LandingLogo';
+import AuthAccess from '../components/landing/AuthAcces';
 import {useUIColors} from '../hooks/UseUIColors';
-
-type LandingProps = {
-  navigation: any;
-}; // LandingProps
 
 /**
  * @Component
  * @React_screen
  * @description
  */
-export default function Landing({navigation}: LandingProps) {
+export default function Landing() {
   const backgroundColor = useUIColors('secondaryColor');
 
-  const authAccessNavigate = (screenName: string) => {
-    console.log('***********************************************************');
-    console.log('NAVIGATE TO -> ', screenName);
-    console.log('***********************************************************');
-    navigation.navigate(screenName);
-  };
-
   return (
-    <AuthAccess navigate={authAccessNavigate}>
+    <AuthAccess>
       <SafeAreaView style={{...styles.wrap, backgroundColor}}>
         <LandingLogo />
         <MultimediaKeyboard />
