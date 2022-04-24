@@ -5,7 +5,7 @@ import {ApplicationContext} from '../../contexts/ApplicationContext';
 import {Section} from '../../models/Section';
 import {REGISTRY_SECTION_NAME} from '../../utils/ApplicationSettings';
 import AuthActionsButtons from './AuthActionsButtons';
-import Registry from '../registry/Registry';
+import RegistryContainer from '../registry/RegistryContainer';
 
 /**
  * @type
@@ -41,7 +41,7 @@ export default function AuthActionsPanel() {
 
   return (
     <View style={styles.wrap}>
-      <Registry active={isActivated(REGISTRY_SECTION_NAME)} />
+      <RegistryContainer active={isActivated(REGISTRY_SECTION_NAME)} />
       <AuthActionsButtons />
     </View>
   );

@@ -10,8 +10,8 @@ import {useUIColors} from '../../hooks/UseUIColors';
  */
 export default function TextField(parameters: any) {
   const color = useUIColors('secondaryColor');
-  const placeholderColor = useUIColors('secondaryColor', '50%', 0.5);
-  const backgroundColor = useUIColors('secondaryColor', undefined, 0.1);
+  const placeholderColor = useUIColors('secondaryColor', '50%', 0.3);
+  const backgroundColor = useUIColors('primaryColor', '95%');
 
   return (
     <TextInput

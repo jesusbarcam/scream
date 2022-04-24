@@ -15,7 +15,7 @@ export const UNVISIBILITY_ICON_NAME = 'eye-slash';
  */
 export default function PasswordField(parameters: any) {
   const [state, setState] = useState<boolean>(true);
-  const color = useUIColors('secondaryColor', '50%', 0.5);
+  const color = useUIColors('secondaryColor', '50%', 0.3);
 
   const iconName = state ? UNVISIBILITY_ICON_NAME : VISIBILITY_ICON_NAME;
 

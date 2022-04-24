@@ -1,57 +1,42 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet, Button} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {useUIColors} from '../../hooks/UseUIColors';
-import BackButton from '../landing/AccessBackButton';
 import RegistryForm from './RegistryForm';
+import RegistryTitle from './RegistryTitle';
+import RegistryTermsAndConditions from './RegistryTermsAndConditions';
 
 /**
- * @type
- * @Typescript
- */
-type RegistryProps = {
-  active: boolean;
-};
-
-/**
- * @component
+ * @Component
  * @React_component
  * @description
  */
-export default function Registry({active}: RegistryProps) {
-  const display = active ? 'flex' : 'none';
-  const height = active ? '90%' : '0%';
+export default function Registry() {
+  const backgroundColor = useUIColors('neutralColor', '100%');
 
   return (
-    <View style={{...styles.wrap, display}}>
-      <View style={{...styles.formWrapper, height}}>
+    <View style={{...styles.wrap, backgroundColor}}>
+      <SafeAreaView style={styles.safeArea}>
+        <RegistryTitle />
         <RegistryForm />
-      </View>
-
-      <View style={styles.backButtonWrapper}>
-        <BackButton />
-      </View>
+        <RegistryTermsAndConditions />
+        <Button title="Registrar" />
+      </SafeAreaView>
     </View>
   );
-}
+} // Registry
 
 const styles = StyleSheet.create({
   wrap: {
-    flex: 1,
-    width: '100%',
     height: '100%',
-    position: 'absolute',
-    justifyContent: 'flex-start',
-    zIndex: 1,
+    borderBottomStartRadius: 25,
+    borderBottomEndRadius: 25,
+    paddingVertical: 50,
+    paddingHorizontal: 40,
   },
-  formWrapper: {
-    marginBottom: 20,
-  },
-
-  backButtonWrapper: {
-    alignItems: 'center',
-  },
-  copyrightText: {
+  safeArea: {
     flex: 1,
+    justifyContent: 'space-between',
   },
 });
