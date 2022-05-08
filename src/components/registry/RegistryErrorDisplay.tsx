@@ -4,6 +4,7 @@ import {StyleSheet, Text} from 'react-native';
 import useFirebaseErrors from '../../hooks/UseFirebaseErrors';
 import {MainStyleSheet} from '../../themes/main';
 
+
 /**
  * @React_component
  * @description
