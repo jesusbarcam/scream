@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {useUIColors} from '../../hooks/UseUIColors';
 import {useFirebaseAuth} from '../../hooks/UseFirebaseAuth';
-import RegistryForm from './RegistryForm';
-import RegistryTitle from './RegistryTitle';
+import {useFirebaseUsersCollection} from '../../hooks/UseFirebaseUserCollection';
 import RegistryTermsAndConditions from './RegistryTermsAndConditions';
+import RegistryErrorDisplay from './RegistryErrorDisplay';
 import BigFormButton from '../shared/BigFormButton';
+import RegistryTitle from './RegistryTitle';
+import RegistryForm from './RegistryForm';
 
 /**
  * @Component
@@ -15,8 +17,11 @@ import BigFormButton from '../shared/BigFormButton';
  * @description
  */
 export default function Registry() {
+  const [state, setState] = useState({error: null});
   const backgroundColor = useUIColors('neutralColor', '100%');
+
   const {createUserWithEmailAndPassword} = useFirebaseAuth();
+  const {addUserInFirebase} = useFirebaseUsersCollection();
 
   /**
    * @method
@@ -24,7 +29,11 @@ export default function Registry() {
    */
   const executeRegistry = () => {
     const userData = {name: 'Jesus Antonio', surname: 'Barajas Camacho'};
-    createUserWithEmailAndPassword('jesusbarcam@gmail.com', '349434', userData);
+    createUserWithEmailAndPassword('jesusbarcam@gmail.com', '349434')
+      .then(({additionalUserInfo, user}: any) => {
+        addUserInFirebase(user.uid, user.email, userData);
+      })
+      .catch(err => setState({error: err.code})); // Catch
   }; // ExecuteRegistry
 
   return (
@@ -34,6 +43,7 @@ export default function Registry() {
         <RegistryForm />
         <RegistryTermsAndConditions />
         <BigFormButton title="Registrar" onPress={executeRegistry} />
+        <RegistryErrorDisplay errorCode={state.error} />
       </SafeAreaView>
     </View>
   );

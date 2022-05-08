@@ -17,7 +17,7 @@ export default function RegistryTermsAndConditions() {
    * @description
    */
   const whenCheckBoxChanged = (state: boolean) => {
-    console.log('El CheckField state ha cambiado -> ', state);
+    console.info('Cuando checkBoxChanged!');
   }; // WhenCheckBoxChanged
 
   return (
