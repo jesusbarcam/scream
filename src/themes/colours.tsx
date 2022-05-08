@@ -17,3 +17,10 @@ export const thirdLightness = '50%';
 //hsl(200,30%,14%)
 export const fourthBaseColor = '200,30%';
 export const fourthLightness = '14%';
+
+// System Colors
+export const systemColors = {
+  error: 'hsl(0,90%,38%)',
+  warning: 'hsl(30,90%,50%)',
+  info: 'hsl(195,70%,35%)',
+};

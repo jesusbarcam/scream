@@ -2,6 +2,8 @@ import React, {Fragment} from 'react';
 import {StyleSheet, Text} from 'react-native';
 
 import useFirebaseErrors from '../../hooks/UseFirebaseErrors';
+import {MainStyleSheet} from '../../themes/main';
+
 
 /**
  * @React_component
@@ -16,10 +18,8 @@ export default function RegistryErrorDisplay({errorCode}: any) {
 
 const styles = StyleSheet.create({
   errorMessage: {
+    ...MainStyleSheet.errorMessage,
     marginTop: 10,
-    color: 'red',
-    fontSize: 13,
-    fontWeight: '300',
     textAlign: 'center',
   },
 });

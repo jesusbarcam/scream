@@ -29,7 +29,9 @@ export default function Registry() {
    */
   const executeRegistry = () => {
     const userData = {name: 'Jesus Antonio', surname: 'Barajas Camacho'};
+
     createUserWithEmailAndPassword('jesusbarcam@gmail.com', '349434')
+
       .then(({additionalUserInfo, user}: any) => {
         addUserInFirebase(user.uid, user.email, userData);
       })
