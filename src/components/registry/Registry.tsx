@@ -16,6 +16,25 @@ import BigFormButton from '../shared/BigFormButton';
 export default function Registry() {
   const backgroundColor = useUIColors('neutralColor', '100%');
 
+<<<<<<< Updated upstream
+=======
+  const {createUserWithEmailAndPassword} = useFirebaseAuth();
+  const {addUserInFirebase} = useFirebaseUsersCollection();
+
+  /**
+   * @method
+   * @description
+   */
+  const executeRegistry = () => {
+    const userData = {name: 'Jesus Antonio', surname: 'Barajas Camacho'};
+    createUserWithEmailAndPassword('jesusbarcam@gmail.com', '3494')
+      .then(({additionalUserInfo, user}: any) => {
+        addUserInFirebase(user.uid, user.email, userData);
+      })
+      .catch(err => setState({error: err.code})); // Catch
+  }; // ExecuteRegistry
+
+>>>>>>> Stashed changes
   return (
     <View style={{...styles.wrap, backgroundColor}}>
       <SafeAreaView style={styles.safeArea}>
