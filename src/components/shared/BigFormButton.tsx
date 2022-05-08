@@ -8,12 +8,12 @@ import {useUIColors} from '../../hooks/UseUIColors';
  * @React_component
  * @description
  */
-export default function BigFormButton({title}: any) {
+export default function BigFormButton({title, onPress}: any) {
   const backgroundColor = useUIColors('highlightColor');
   const color = useUIColors('highlightColor', '90%');
 
   return (
-    <TouchableHighlight>
+    <TouchableHighlight onPress={() => onPress()}>
       <View style={{...styles.wrap, backgroundColor}}>
         <Text style={{...styles.text, color}}>{title}</Text>
       </View>
